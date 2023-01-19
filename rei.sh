@@ -563,6 +563,11 @@ check_os_install_kind()
            info "Detecting OS..."
            allgood "found ${distribution}"
            check_install_ubuntu
+	elif [[ "${distribution}" =~ "CentOS" ]]; then
+           preflight_check
+           info "Detecting OS..."
+           allgood "found ${distribution}"
+           check_install_ubuntu
         else
            info "Detecting OS..."
            info "${distribution}"
